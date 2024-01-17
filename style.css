@@ -1,0 +1,179 @@
+*{
+    margin: 0; /* by default 0 */
+    padding: 0;
+}
+body{
+   background-color: #548687; 
+   text-align: center;
+}
+.container{
+    height: 70vh ;
+    width: 60vh;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+    margin: auto;
+}     
+       
+       .card2 {
+        width: 60vh;
+        height: 70vh;
+        background-color: #1a1a1a;
+        transition: all .2s;
+        margin-top: 20px;
+       }
+       
+       .card2:hover {
+        transform: scale(0.98);
+        border-radius: 20px;
+       }
+       
+       .container:hover {
+        box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+       }
+ .game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+    padding-top: 4vmin;
+ }
+ .box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 8vmin;
+    color: rgb(255, 98, 0);
+     background-color: #fff; 
+ }
+
+ /* === removing default button style ===*/
+.reset-btn {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button styling */
+  .reset-btn {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .reset-btn:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+
+  .new-game{
+    height: 2.8em;
+    width: 9em;
+    background: transparent;
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+    border: 2px solid #010c18;
+    outline: none;
+    color: #e0e6eb;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px 4px ,inset -2px -2px 4px;
+  }
+
+  .new-game:hover{
+    background: #016dd9;
+    color: #ffffff;
+    animation: squeeze3124 0.9s both;
+  }
+
+  @keyframes squeeze3124 {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+  
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+  
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  .msg{
+    font-size: 7vmin;
+    color: gold;
+    animation: congratulate 2s ease-in-out infinite;
+  }
+
+  .msg-container{
+    height: 80vmin;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+  }
+
+  .msg-hide {
+      display: none;  
+  }
+
+  @keyframes congratulate {
+    0% { color: gold; transform: scale(1); }
+    50% { color: yellow; opacity:0.3; transform: scale(1.2); }
+    100% { color: gold; transform: scale(1); }
+}
+
+
